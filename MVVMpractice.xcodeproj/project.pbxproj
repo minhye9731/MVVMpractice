@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E1D6D4B297A6B31004AF835 /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D6D4A297A6B31004AF835 /* NewsListTableViewController.swift */; };
 		0E1D6D4E297A797E004AF835 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D6D4D297A797E004AF835 /* WebService.swift */; };
+		0E1D6D51297B8EB9004AF835 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D6D50297B8EB9004AF835 /* Article.swift */; };
 		0E322E05297991820050EB2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E322E04297991820050EB2F /* AppDelegate.swift */; };
 		0E322E07297991820050EB2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E322E06297991820050EB2F /* SceneDelegate.swift */; };
 		0E322E0C297991820050EB2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E322E0A297991820050EB2F /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		0E1D6D4A297A6B31004AF835 /* NewsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewController.swift; sourceTree = "<group>"; };
 		0E1D6D4D297A797E004AF835 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		0E1D6D50297B8EB9004AF835 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		0E322E01297991820050EB2F /* MVVMpractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMpractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E322E04297991820050EB2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E322E06297991820050EB2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		0E1D6D4F297B8EAD004AF835 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0E1D6D50297B8EB9004AF835 /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0E322DF8297991820050EB2F = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		0E322E03297991820050EB2F /* MVVMpractice */ = {
 			isa = PBXGroup;
 			children = (
+				0E1D6D4F297B8EAD004AF835 /* Models */,
 				0E1D6D4C297A796E004AF835 /* Services */,
 				0E1D6D49297A6B1A004AF835 /* Controllers */,
 				0E322E04297991820050EB2F /* AppDelegate.swift */,
@@ -161,6 +172,7 @@
 				0E1D6D4B297A6B31004AF835 /* NewsListTableViewController.swift in Sources */,
 				0E1D6D4E297A797E004AF835 /* WebService.swift in Sources */,
 				0E322E07297991820050EB2F /* SceneDelegate.swift in Sources */,
+				0E1D6D51297B8EB9004AF835 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
