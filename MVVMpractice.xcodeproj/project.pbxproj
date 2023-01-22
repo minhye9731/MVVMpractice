@@ -108,11 +108,7 @@
 		0E322E03297991820050EB2F /* MVVMpractice */ = {
 			isa = PBXGroup;
 			children = (
-				0E1D6D55297C3815004AF835 /* Cells */,
-				0E1D6D52297C3346004AF835 /* ViewModels */,
-				0E1D6D4F297B8EAD004AF835 /* Models */,
-				0E1D6D4C297A796E004AF835 /* Services */,
-				0E1D6D49297A6B1A004AF835 /* Controllers */,
+				0E7C80A4297D417700005C64 /* News App */,
 				0E322E04297991820050EB2F /* AppDelegate.swift */,
 				0E322E06297991820050EB2F /* SceneDelegate.swift */,
 				0E322E0A297991820050EB2F /* Main.storyboard */,
@@ -121,6 +117,18 @@
 				0E322E12297991840050EB2F /* Info.plist */,
 			);
 			path = MVVMpractice;
+			sourceTree = "<group>";
+		};
+		0E7C80A4297D417700005C64 /* News App */ = {
+			isa = PBXGroup;
+			children = (
+				0E1D6D55297C3815004AF835 /* Cells */,
+				0E1D6D52297C3346004AF835 /* ViewModels */,
+				0E1D6D4F297B8EAD004AF835 /* Models */,
+				0E1D6D4C297A796E004AF835 /* Services */,
+				0E1D6D49297A6B1A004AF835 /* Controllers */,
+			);
+			path = "News App";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
