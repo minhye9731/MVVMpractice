@@ -6,19 +6,36 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 class Webservice {
     
-    func getArticles(url: URL, completion: @escaping ([Any]?) -> ()) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
+    func getArticles(url: URL, completion: @escaping ([Article]?) -> ()) {
+        
+        AF.request(url, method: .get).responseData { response in
             
-            if let error = error {
+            switch response.result {
+            case .success(let value):
+                
+                let json = JSON(value)
+
+                let itemData = json["articles"].arrayValue
+                print("itemData \(itemData)")
+                print("itemData.count \(itemData.count)")
+                
+                let array: [Article] = itemData.map { fullArticle -> Article in
+                    let title = fullArticle["title"].stringValue
+                    let description = fullArticle["description"].stringValue
+                    
+                    return Article(title: title, description: description)
+                }
+                completion(array)
+
+            case .failure(let error):
                 print(error.localizedDescription)
                 completion(nil)
-            } else if let data = data {
-                print(data)
             }
-            
-        }.resume()
+        }
     }
 }
