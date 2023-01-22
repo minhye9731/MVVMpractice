@@ -24,6 +24,7 @@
 		0E7C80AD297D7B2000005C64 /* OrderWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C80AC297D7B2000005C64 /* OrderWebservice.swift */; };
 		0E7C80B0297D816A00005C64 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C80AF297D816A00005C64 /* Order.swift */; };
 		0E7C80B3297D8C4800005C64 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C80B2297D8C4800005C64 /* OrderViewModel.swift */; };
+		0E7C80B5297D979400005C64 /* AddCoffeeOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C80B4297D979400005C64 /* AddCoffeeOrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		0E7C80AC297D7B2000005C64 /* OrderWebservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWebservice.swift; sourceTree = "<group>"; };
 		0E7C80AF297D816A00005C64 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		0E7C80B2297D8C4800005C64 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		0E7C80B4297D979400005C64 /* AddCoffeeOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeOrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				0E7C80B2297D8C4800005C64 /* OrderViewModel.swift */,
+				0E7C80B4297D979400005C64 /* AddCoffeeOrderViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				0E1D6D4B297A6B31004AF835 /* NewsListTableViewController.swift in Sources */,
 				0E7C80B0297D816A00005C64 /* Order.swift in Sources */,
 				0E1D6D4E297A797E004AF835 /* WebService.swift in Sources */,
+				0E7C80B5297D979400005C64 /* AddCoffeeOrderViewModel.swift in Sources */,
 				0E1D6D54297C33A4004AF835 /* ArticleViewModel.swift in Sources */,
 				0E322E07297991820050EB2F /* SceneDelegate.swift in Sources */,
 				0E1D6D57297C3828004AF835 /* ArticleTableViewCell.swift in Sources */,

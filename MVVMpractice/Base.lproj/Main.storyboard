@@ -123,10 +123,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rA4-1m-qV5">
-                                <rect key="frame" x="0.0" y="56" width="393" height="391.66666666666669"/>
+                                <rect key="frame" x="0.0" y="56" width="393" height="344.66666666666669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rkH-4G-9PK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoffeeTypeTableViewCell" id="rkH-4G-9PK">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rkH-4G-9PK" id="r1o-yE-KfS">
@@ -135,6 +135,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sP2-Gy-LHB" id="meH-bG-yrt"/>
+                                    <outlet property="delegate" destination="sP2-Gy-LHB" id="YVp-4W-6cM"/>
+                                </connections>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9g-ZL-lim">
                                 <rect key="frame" x="96.666666666666686" y="593" width="200" height="34"/>
@@ -154,35 +158,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="x3L-z1-687">
-                                <rect key="frame" x="93.666666666666686" y="483.66666666666669" width="206" height="32.333333333333314"/>
-                                <segments>
-                                    <segment title="Small"/>
-                                    <segment title="Medium"/>
-                                    <segment title="Large"/>
-                                </segments>
-                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FsU-Fq-YH8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="x3L-z1-687" firstAttribute="top" secondItem="rA4-1m-qV5" secondAttribute="bottom" constant="36" id="15R-pw-qV5"/>
                             <constraint firstItem="o9g-ZL-lim" firstAttribute="centerX" secondItem="yrO-yv-bbh" secondAttribute="centerX" id="2Aa-6z-6WC"/>
                             <constraint firstItem="FsU-Fq-YH8" firstAttribute="bottom" secondItem="lTF-st-9VH" secondAttribute="bottom" constant="114" id="3gS-b5-av3"/>
-                            <constraint firstItem="x3L-z1-687" firstAttribute="centerX" secondItem="yrO-yv-bbh" secondAttribute="centerX" id="9Hp-HP-xhQ"/>
                             <constraint firstItem="rA4-1m-qV5" firstAttribute="width" secondItem="yrO-yv-bbh" secondAttribute="width" id="N2b-sl-OOD"/>
-                            <constraint firstItem="rA4-1m-qV5" firstAttribute="height" secondItem="yrO-yv-bbh" secondAttribute="height" multiplier="0.5" id="O7s-p3-d41"/>
+                            <constraint firstItem="rA4-1m-qV5" firstAttribute="height" secondItem="yrO-yv-bbh" secondAttribute="height" multiplier="0.44" id="O7s-p3-d41"/>
                             <constraint firstItem="rA4-1m-qV5" firstAttribute="leading" secondItem="FsU-Fq-YH8" secondAttribute="leading" id="cHt-pA-HA4"/>
                             <constraint firstItem="lTF-st-9VH" firstAttribute="centerX" secondItem="yrO-yv-bbh" secondAttribute="centerX" id="gGE-IO-0od"/>
                             <constraint firstItem="rA4-1m-qV5" firstAttribute="top" secondItem="FsU-Fq-YH8" secondAttribute="top" id="kAt-QJ-Uf9"/>
                             <constraint firstItem="lTF-st-9VH" firstAttribute="top" secondItem="o9g-ZL-lim" secondAttribute="bottom" constant="8" symbolic="YES" id="kcx-QP-w2y"/>
-                            <constraint firstItem="o9g-ZL-lim" firstAttribute="top" secondItem="x3L-z1-687" secondAttribute="bottom" constant="78" id="vAq-r1-kmW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Order" id="jtX-fC-sTB">
                         <barButtonItem key="leftBarButtonItem" title="Close" id="iL3-IV-uJ6"/>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="b73-V8-vAn"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="rA4-1m-qV5" id="iuw-2W-DRj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLq-HJ-DHD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
