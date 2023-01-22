@@ -12,6 +12,8 @@ class AddOrderViewController: UIViewController {
     
     private var vm = AddCoffeeOrderViewModel()
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     private var coffeeSizesSegmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
@@ -30,6 +32,40 @@ class AddOrderViewController: UIViewController {
     
 }
 
+// MARK: - 기타 함수 설정
+extension AddOrderViewController {
+    
+    @IBAction func save() { // 저장하기
+        
+        let name = self.nameTextField.text
+        let email = self.emailTextField.text
+        
+        let selectedSize = self.coffeeSizesSegmentedControl.titleForSegment(at: self.coffeeSizesSegmentedControl.selectedSegmentIndex)
+        
+        guard let indexPath = self.tableView.indexPathForSelectedRow else {
+            fatalError("Error in selecting coffee!")
+        }
+        
+        // 사용자가 선택한 주문정보를 view model로 보냄
+        self.vm.name = name
+        self.vm.email = email
+        self.vm.selectedSize = selectedSize
+        self.vm.selectedType = self.vm.types[indexPath.row]
+        
+        // view model로 보낸 정보를 네트워크 메서드를 태워서 주문 액션을 진행
+        OrderWebservice().load(resource: Order.create(vm: self.vm)) { result in
+            switch result {
+            case .success(let order):
+                print(order)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+}
+
+// MARK: - tableview 설정
 extension AddOrderViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
