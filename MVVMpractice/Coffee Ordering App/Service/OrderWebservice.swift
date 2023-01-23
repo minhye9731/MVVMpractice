@@ -39,7 +39,6 @@ class OrderWebservice {
         request.httpBody = resource.body
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        
         URLSession.shared.dataTask(with: request) { data, response, error in
 
             guard let data = data, error == nil else {

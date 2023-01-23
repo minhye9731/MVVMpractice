@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+// MARK: - OrderListViewModel
 class OrderListViewModel {
     
     var ordersViewModel: [OrderViewModel]
@@ -24,6 +24,7 @@ extension OrderListViewModel {
     }
 }
 
+// MARK: - OrderViewModel
 struct OrderViewModel {
     let order: Order
 }

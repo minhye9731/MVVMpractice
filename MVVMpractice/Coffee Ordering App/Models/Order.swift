@@ -57,9 +57,6 @@ extension Order {
 }
 
 
-
-
-
 extension Order {
     
     init?(_ vm: AddCoffeeOrderViewModel) { // view model을 통해 전달받은 데이터를 Order 타입으로 변환
