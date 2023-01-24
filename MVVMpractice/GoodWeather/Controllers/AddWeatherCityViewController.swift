@@ -8,22 +8,25 @@
 import Foundation
 import UIKit
 
+protocol AddWeatherDelegate {
+    func addWeatherDidSave(vm: WeatherViewModel)
+}
+
 class AddWeatherCityViewController: UIViewController {
     
     @IBOutlet weak var cityNameTextField: UITextField!
+    private var addWeatherVM = AddWeatherViewModel()
     
-
+    var delegate: AddWeatherDelegate?
+    
+    // [Save] 클릭 시
     @IBAction func saveCityButtonPressed() {
-        if let city = cityNameTextField.text {
-            let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=412f4b3ad7251a4cc5b26b8a732f1a4d&units=imperial")!
+        
+        if let city = cityNameTextField.text { // 입력한 city명을 갖고
             
-            let weatherResource = WeatherResource<Any>(url: weatherURL) { data in
-                return data
-                
-            }
-            
-            WeatherWebService().load(resource: weatherResource) { result in
-                
+            addWeatherVM.addWeather(for: city) { (vm) in // view model에서 네트워크로 받은 데이터를
+                self.delegate?.addWeatherDidSave(vm: vm) // delegate로 첫화면으로 전달하고
+                self.dismiss(animated: true, completion: nil) // 추가화면은 닫음
             }
         }
     }
