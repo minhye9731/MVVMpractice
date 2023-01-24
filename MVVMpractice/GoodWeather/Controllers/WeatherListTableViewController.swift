@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-class WeatherListTableViewController: UITableViewController {
+class WeatherListTableViewController: UITableViewController, AddWeatherDelegate {
+    
+    private var weatherListViewModel = WeatherListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +18,6 @@ class WeatherListTableViewController: UITableViewController {
     }
     
     private func setNavi() {
-        
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.tintColor = .white
         
@@ -28,9 +29,15 @@ class WeatherListTableViewController: UITableViewController {
         self.navigationItem.scrollEdgeAppearance = navibarAppearance
         self.navigationItem.standardAppearance = navibarAppearance
     }
-}
 
-extension WeatherListTableViewController {
+    // MARK: - AddWeatherDelegate 설정
+    func addWeatherDidSave(vm: WeatherViewModel) {
+        print("vm = \(vm)")
+        weatherListViewModel.addWeatherViewModel(vm)
+        self.tableView.reloadData()
+    }
+
+    // MARK: - tableview 설정
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -40,14 +47,39 @@ extension WeatherListTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return weatherListViewModel.numberOfRows(section)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as! WeatherCell
         
-        cell.cityNameLabel.text = "Houston"
-        cell.temperatureLabel.text = "70°"
+        let weatherVM = weatherListViewModel.modelAt(indexPath.row)
+        cell.configure(weatherVM)
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "AddWeatherCityViewController" {
+            prepareSegueForAddWeatherCityViewController(segue: segue)
+        }
+    }
+    
+    func prepareSegueForAddWeatherCityViewController(segue: UIStoryboardSegue) {
+        
+        guard let nav = segue.destination as? UINavigationController else {
+            fatalError("NavigationController not found")
+        }
+        
+        guard let addWeatherCityVC = nav.viewControllers.first as? AddWeatherCityViewController else {
+            fatalError("AddWeatherCityViewController not found")
+        }
+        
+        addWeatherCityVC.delegate = self
+        // whenever addWeatherCityVC is gonna fire,
+        // the delegate func "addWeatherDidSave" notifies the WeatherListTableViewController
+        // and "addWeatherDidSave" is gonna fire as well.
+        
+    }
+    
 }
