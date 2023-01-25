@@ -8,13 +8,26 @@
 import Foundation
 import UIKit
 
+protocol SettingsDelegate {
+    func settingsDone(vm: SettingsViewModel)
+}
+
 class SettingsTableViewController: UITableViewController {
     
     private var settingsViewModel = SettingsViewModel()
+    var delegate: SettingsDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavi()
+    }
+    
+    @IBAction func Done() {
+        if let delegate = self.delegate {
+            delegate.settingsDone(vm: settingsViewModel)
+        }
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     private func setNavi() {
