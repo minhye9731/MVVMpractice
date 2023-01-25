@@ -15,6 +15,8 @@
 		0E1D6D5A297C44A9004AF835 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1D6D59297C44A9004AF835 /* Alamofire */; };
 		0E1D6D5D297C482B004AF835 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1D6D5C297C482B004AF835 /* SwiftyJSON */; };
 		0E2A906B2981786500E6F84F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A906A2981786500E6F84F /* SettingsTableViewController.swift */; };
+		0E2A906D298178C700E6F84F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A906C298178C700E6F84F /* SettingsViewModel.swift */; };
+		0E2A906F29817AA900E6F84F /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A906E29817AA900E6F84F /* Unit.swift */; };
 		0E322E05297991820050EB2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E322E04297991820050EB2F /* AppDelegate.swift */; };
 		0E322E07297991820050EB2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E322E06297991820050EB2F /* SceneDelegate.swift */; };
 		0E322E0C297991820050EB2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E322E0A297991820050EB2F /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		0E1D6D53297C33A4004AF835 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		0E1D6D56297C3827004AF835 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		0E2A906A2981786500E6F84F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		0E2A906C298178C700E6F84F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		0E2A906E29817AA900E6F84F /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		0E322E01297991820050EB2F /* MVVMpractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMpractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E322E04297991820050EB2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E322E06297991820050EB2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 			children = (
 				0E902336297ED73B005F1FD7 /* AddWeatherViewModel.swift */,
 				0E90233E297EDA27005F1FD7 /* WeatherListViewModel.swift */,
+				0E2A906C298178C700E6F84F /* SettingsViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				0E902339297ED781005F1FD7 /* Constants.swift */,
+				0E2A906E29817AA900E6F84F /* Unit.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -375,8 +381,10 @@
 				0E7C80B3297D8C4800005C64 /* OrderViewModel.swift in Sources */,
 				0E1D6D4B297A6B31004AF835 /* NewsListTableViewController.swift in Sources */,
 				0E902334297ED533005F1FD7 /* WeatherResponse.swift in Sources */,
+				0E2A906D298178C700E6F84F /* SettingsViewModel.swift in Sources */,
 				0E7C80B0297D816A00005C64 /* Order.swift in Sources */,
 				0E1D6D4E297A797E004AF835 /* WebService.swift in Sources */,
+				0E2A906F29817AA900E6F84F /* Unit.swift in Sources */,
 				0E7C80B5297D979400005C64 /* AddCoffeeOrderViewModel.swift in Sources */,
 				0E1D6D54297C33A4004AF835 /* ArticleViewModel.swift in Sources */,
 				0E322E07297991820050EB2F /* SceneDelegate.swift in Sources */,
