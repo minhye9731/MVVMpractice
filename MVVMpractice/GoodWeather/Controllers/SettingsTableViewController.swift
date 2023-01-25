@@ -39,7 +39,6 @@ extension SettingsTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(settingsViewModel.units.count)
         return settingsViewModel.units.count
     }
     
@@ -48,7 +47,32 @@ extension SettingsTableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath)
         cell.textLabel?.text = settingsItem.displayName
-        print(settingsItem.displayName)
+        
+        if settingsItem == settingsViewModel.selectedUnit {
+            cell.accessoryType = .checkmark
+        }
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // uncheck all cells
+        tableView.visibleCells.forEach { cell in
+            cell.accessoryType = .none
+        }
+        
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.accessoryType = .checkmark
+            let unit = Unit.allCases[indexPath.row]
+            settingsViewModel.selectedUnit = unit
+        }
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.accessoryType = .none
+        }
     }
 }
