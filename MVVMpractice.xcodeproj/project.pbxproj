@@ -127,6 +127,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		0E2A90702983CBCC00E6F84F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0E322E04297991820050EB2F /* AppDelegate.swift */,
+				0E322E06297991820050EB2F /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		0E322DF8297991820050EB2F = {
 			isa = PBXGroup;
 			children = (
@@ -146,11 +155,10 @@
 		0E322E03297991820050EB2F /* MVVMpractice */ = {
 			isa = PBXGroup;
 			children = (
+				0E2A90702983CBCC00E6F84F /* Application */,
 				0E902326297EC2FD005F1FD7 /* GoodWeather */,
 				0E7C80A5297D41E500005C64 /* Coffee Ordering App */,
 				0E7C80A4297D417700005C64 /* News App */,
-				0E322E04297991820050EB2F /* AppDelegate.swift */,
-				0E322E06297991820050EB2F /* SceneDelegate.swift */,
 				0E322E0A297991820050EB2F /* Main.storyboard */,
 				0E322E0D297991840050EB2F /* Assets.xcassets */,
 				0E322E0F297991840050EB2F /* LaunchScreen.storyboard */,
