@@ -17,7 +17,7 @@ extension Unit {
     var displayName: String {
         get {
             switch(self) {
-            case .celsius: return "Celcius"
+            case .celsius: return "Celsius"
             case .fahrenheit: return "Fahrenheit"
             }
         }
