@@ -17,6 +17,7 @@
 		0E2A906B2981786500E6F84F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A906A2981786500E6F84F /* SettingsTableViewController.swift */; };
 		0E2A906D298178C700E6F84F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A906C298178C700E6F84F /* SettingsViewModel.swift */; };
 		0E2A906F29817AA900E6F84F /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A906E29817AA900E6F84F /* Unit.swift */; };
+		0E2A907329856C4D00E6F84F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A907229856C4D00E6F84F /* LoginViewController.swift */; };
 		0E322E05297991820050EB2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E322E04297991820050EB2F /* AppDelegate.swift */; };
 		0E322E07297991820050EB2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E322E06297991820050EB2F /* SceneDelegate.swift */; };
 		0E322E0C297991820050EB2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E322E0A297991820050EB2F /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		0E2A906A2981786500E6F84F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		0E2A906C298178C700E6F84F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		0E2A906E29817AA900E6F84F /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		0E2A907229856C4D00E6F84F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0E322E01297991820050EB2F /* MVVMpractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMpractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E322E04297991820050EB2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E322E06297991820050EB2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		0E2A907129856C0000E6F84F /* BindingMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				0E2A907229856C4D00E6F84F /* LoginViewController.swift */,
+			);
+			path = BindingMVVM;
+			sourceTree = "<group>";
+		};
 		0E322DF8297991820050EB2F = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +165,7 @@
 		0E322E03297991820050EB2F /* MVVMpractice */ = {
 			isa = PBXGroup;
 			children = (
+				0E2A907129856C0000E6F84F /* BindingMVVM */,
 				0E2A90702983CBCC00E6F84F /* Application */,
 				0E902326297EC2FD005F1FD7 /* GoodWeather */,
 				0E7C80A5297D41E500005C64 /* Coffee Ordering App */,
@@ -379,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E2A907329856C4D00E6F84F /* LoginViewController.swift in Sources */,
 				0E7C80A8297D440100005C64 /* OrdersTableViewController.swift in Sources */,
 				0E90233D297ED863005F1FD7 /* String+Extensions.swift in Sources */,
 				0E90232B297EC4DE005F1FD7 /* AddWeatherCityViewController.swift in Sources */,
