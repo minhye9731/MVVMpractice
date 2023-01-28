@@ -16,6 +16,10 @@ class LoginViewController: UIViewController {
         setupUI()
     }
     
+    @objc func login() {
+        
+    }
+    
     private func setupUI() {
         
         let usernameTextField = UITextField()
@@ -29,7 +33,22 @@ class LoginViewController: UIViewController {
         passwordTextField.backgroundColor = .lightGray
         passwordTextField.borderStyle = .roundedRect
         
+        let loginButton = UIButton()
+        loginButton.setTitle("Login", for: .normal)
+        loginButton.backgroundColor = .gray
+        loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
         
+        let stackView = UIStackView(arrangedSubviews: [usernameTextField, passwordTextField, loginButton])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        stackView.distribution = .fillEqually
+        
+        self.view.addSubview(stackView)
+        
+        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        stackView.widthAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
 }
