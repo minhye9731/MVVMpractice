@@ -19,6 +19,7 @@
 		0E2A906F29817AA900E6F84F /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A906E29817AA900E6F84F /* Unit.swift */; };
 		0E2A907329856C4D00E6F84F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A907229856C4D00E6F84F /* LoginViewController.swift */; };
 		0E2A907629856F7600E6F84F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A907529856F7600E6F84F /* LoginViewModel.swift */; };
+		0E2A9079298572F600E6F84F /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A9078298572F600E6F84F /* BindingTextField.swift */; };
 		0E322E05297991820050EB2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E322E04297991820050EB2F /* AppDelegate.swift */; };
 		0E322E07297991820050EB2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E322E06297991820050EB2F /* SceneDelegate.swift */; };
 		0E322E0C297991820050EB2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E322E0A297991820050EB2F /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		0E2A906E29817AA900E6F84F /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		0E2A907229856C4D00E6F84F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0E2A907529856F7600E6F84F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		0E2A9078298572F600E6F84F /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 		0E322E01297991820050EB2F /* MVVMpractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMpractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E322E04297991820050EB2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E322E06297991820050EB2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		0E2A907129856C0000E6F84F /* BindingMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				0E2A9077298572DC00E6F84F /* Custom Views */,
 				0E2A907429856F6900E6F84F /* View Models */,
 				0E2A907229856C4D00E6F84F /* LoginViewController.swift */,
 			);
@@ -155,6 +158,14 @@
 				0E2A907529856F7600E6F84F /* LoginViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		0E2A9077298572DC00E6F84F /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E2A9078298572F600E6F84F /* BindingTextField.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		0E322DF8297991820050EB2F = {
@@ -406,6 +417,7 @@
 				0E90233D297ED863005F1FD7 /* String+Extensions.swift in Sources */,
 				0E90232B297EC4DE005F1FD7 /* AddWeatherCityViewController.swift in Sources */,
 				0E322E05297991820050EB2F /* AppDelegate.swift in Sources */,
+				0E2A9079298572F600E6F84F /* BindingTextField.swift in Sources */,
 				0E902329297EC4B9005F1FD7 /* WeatherListTableViewController.swift in Sources */,
 				0E7C80AA297D443000005C64 /* AddOrderViewController.swift in Sources */,
 				0E902337297ED73B005F1FD7 /* AddWeatherViewModel.swift in Sources */,
