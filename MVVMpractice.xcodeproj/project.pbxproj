@@ -43,10 +43,18 @@
 		0E90233D297ED863005F1FD7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E90233C297ED863005F1FD7 /* String+Extensions.swift */; };
 		0E90233F297EDA27005F1FD7 /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E90233E297EDA27005F1FD7 /* WeatherListViewModel.swift */; };
 		0E902341297EE5BF005F1FD7 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E902340297EE5BF005F1FD7 /* Double+Extensions.swift */; };
+		0E92A43E298BFEBE0015FD26 /* MVVMpracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E92A43D298BFEBE0015FD26 /* MVVMpracticeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		0E2A908329880CA500E6F84F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E322DF9297991820050EB2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E322E00297991820050EB2F;
+			remoteInfo = MVVMpractice;
+		};
+		0E92A43F298BFEBE0015FD26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0E322DF9297991820050EB2F /* Project object */;
 			proxyType = 1;
@@ -93,6 +101,8 @@
 		0E90233C297ED863005F1FD7 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		0E90233E297EDA27005F1FD7 /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
 		0E902340297EE5BF005F1FD7 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		0E92A43B298BFEBE0015FD26 /* MVVMpracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMpracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E92A43D298BFEBE0015FD26 /* MVVMpracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMpracticeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,13 @@
 			files = (
 				0E1D6D5D297C482B004AF835 /* SwiftyJSON in Frameworks */,
 				0E1D6D5A297C44A9004AF835 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E92A438298BFEBE0015FD26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +228,7 @@
 			children = (
 				0E322E03297991820050EB2F /* MVVMpractice */,
 				0E2A908029880CA500E6F84F /* CalculatorAppTests */,
+				0E92A43C298BFEBE0015FD26 /* MVVMpracticeTests */,
 				0E322E02297991820050EB2F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -220,6 +238,7 @@
 			children = (
 				0E322E01297991820050EB2F /* MVVMpractice.app */,
 				0E2A907F29880CA500E6F84F /* CalculatorAppTests.xctest */,
+				0E92A43B298BFEBE0015FD26 /* MVVMpracticeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,9 +246,9 @@
 		0E322E03297991820050EB2F /* MVVMpractice */ = {
 			isa = PBXGroup;
 			children = (
+				0E2A90702983CBCC00E6F84F /* Application */,
 				0E2A907A29880C6000E6F84F /* CalculatorApp */,
 				0E2A907129856C0000E6F84F /* BindingMVVM */,
-				0E2A90702983CBCC00E6F84F /* Application */,
 				0E902326297EC2FD005F1FD7 /* GoodWeather */,
 				0E7C80A5297D41E500005C64 /* Coffee Ordering App */,
 				0E7C80A4297D417700005C64 /* News App */,
@@ -374,6 +393,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		0E92A43C298BFEBE0015FD26 /* MVVMpracticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				0E92A43D298BFEBE0015FD26 /* MVVMpracticeTests.swift */,
+			);
+			path = MVVMpracticeTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,6 +443,24 @@
 			productReference = 0E322E01297991820050EB2F /* MVVMpractice.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0E92A43A298BFEBE0015FD26 /* MVVMpracticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E92A443298BFEBE0015FD26 /* Build configuration list for PBXNativeTarget "MVVMpracticeTests" */;
+			buildPhases = (
+				0E92A437298BFEBE0015FD26 /* Sources */,
+				0E92A438298BFEBE0015FD26 /* Frameworks */,
+				0E92A439298BFEBE0015FD26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E92A440298BFEBE0015FD26 /* PBXTargetDependency */,
+			);
+			name = MVVMpracticeTests;
+			productName = MVVMpracticeTests;
+			productReference = 0E92A43B298BFEBE0015FD26 /* MVVMpracticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -432,6 +477,10 @@
 					};
 					0E322E00297991820050EB2F = {
 						CreatedOnToolsVersion = 14.1;
+					};
+					0E92A43A298BFEBE0015FD26 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 0E322E00297991820050EB2F;
 					};
 				};
 			};
@@ -454,6 +503,7 @@
 			targets = (
 				0E322E00297991820050EB2F /* MVVMpractice */,
 				0E2A907E29880CA500E6F84F /* CalculatorAppTests */,
+				0E92A43A298BFEBE0015FD26 /* MVVMpracticeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -473,6 +523,13 @@
 				0E322E11297991840050EB2F /* LaunchScreen.storyboard in Resources */,
 				0E322E0E297991840050EB2F /* Assets.xcassets in Resources */,
 				0E322E0C297991820050EB2F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E92A439298BFEBE0015FD26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +581,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0E92A437298BFEBE0015FD26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E92A43E298BFEBE0015FD26 /* MVVMpracticeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -531,6 +596,11 @@
 			isa = PBXTargetDependency;
 			target = 0E322E00297991820050EB2F /* MVVMpractice */;
 			targetProxy = 0E2A908329880CA500E6F84F /* PBXContainerItemProxy */;
+		};
+		0E92A440298BFEBE0015FD26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E322E00297991820050EB2F /* MVVMpractice */;
+			targetProxy = 0E92A43F298BFEBE0015FD26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -770,6 +840,42 @@
 			};
 			name = Release;
 		};
+		0E92A441298BFEBE0015FD26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U8U4L6FXAF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.mhkang.MVVMpracticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVMpractice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MVVMpractice";
+			};
+			name = Debug;
+		};
+		0E92A442298BFEBE0015FD26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U8U4L6FXAF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.mhkang.MVVMpracticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVMpractice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MVVMpractice";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -796,6 +902,15 @@
 			buildConfigurations = (
 				0E322E16297991840050EB2F /* Debug */,
 				0E322E17297991840050EB2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E92A443298BFEBE0015FD26 /* Build configuration list for PBXNativeTarget "MVVMpracticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E92A441298BFEBE0015FD26 /* Debug */,
+				0E92A442298BFEBE0015FD26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
