@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0542A029BCCE5300599E00 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05429A29BCCE5300599E00 /* TestPresenter.swift */; };
+		0E0542A129BCCE5300599E00 /* TestWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05429B29BCCE5300599E00 /* TestWorker.swift */; };
+		0E0542A229BCCE5300599E00 /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05429C29BCCE5300599E00 /* TestRouter.swift */; };
+		0E0542A329BCCE5300599E00 /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05429D29BCCE5300599E00 /* TestModels.swift */; };
+		0E0542A429BCCE5300599E00 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05429E29BCCE5300599E00 /* TestViewController.swift */; };
+		0E0542A529BCCE5300599E00 /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05429F29BCCE5300599E00 /* TestInteractor.swift */; };
 		0E1D6D4B297A6B31004AF835 /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D6D4A297A6B31004AF835 /* NewsListTableViewController.swift */; };
 		0E1D6D4E297A797E004AF835 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D6D4D297A797E004AF835 /* WebService.swift */; };
 		0E1D6D51297B8EB9004AF835 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D6D50297B8EB9004AF835 /* Article.swift */; };
@@ -64,6 +70,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E05429A29BCCE5300599E00 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
+		0E05429B29BCCE5300599E00 /* TestWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWorker.swift; sourceTree = "<group>"; };
+		0E05429C29BCCE5300599E00 /* TestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
+		0E05429D29BCCE5300599E00 /* TestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModels.swift; sourceTree = "<group>"; };
+		0E05429E29BCCE5300599E00 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		0E05429F29BCCE5300599E00 /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
 		0E1D6D4A297A6B31004AF835 /* NewsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewController.swift; sourceTree = "<group>"; };
 		0E1D6D4D297A797E004AF835 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		0E1D6D50297B8EB9004AF835 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -132,6 +144,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E05429929BCCE3400599E00 /* VIPTest */ = {
+			isa = PBXGroup;
+			children = (
+				0E05429A29BCCE5300599E00 /* TestPresenter.swift */,
+				0E05429B29BCCE5300599E00 /* TestWorker.swift */,
+				0E05429C29BCCE5300599E00 /* TestRouter.swift */,
+				0E05429D29BCCE5300599E00 /* TestModels.swift */,
+				0E05429E29BCCE5300599E00 /* TestViewController.swift */,
+				0E05429F29BCCE5300599E00 /* TestInteractor.swift */,
+			);
+			path = VIPTest;
+			sourceTree = "<group>";
+		};
 		0E1D6D49297A6B1A004AF835 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +271,7 @@
 		0E322E03297991820050EB2F /* MVVMpractice */ = {
 			isa = PBXGroup;
 			children = (
+				0E05429929BCCE3400599E00 /* VIPTest */,
 				0E2A90702983CBCC00E6F84F /* Application */,
 				0E2A907A29880C6000E6F84F /* CalculatorApp */,
 				0E2A907129856C0000E6F84F /* BindingMVVM */,
@@ -548,11 +574,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0542A429BCCE5300599E00 /* TestViewController.swift in Sources */,
 				0E2A907329856C4D00E6F84F /* LoginViewController.swift in Sources */,
 				0E7C80A8297D440100005C64 /* OrdersTableViewController.swift in Sources */,
 				0E90233D297ED863005F1FD7 /* String+Extensions.swift in Sources */,
 				0E90232B297EC4DE005F1FD7 /* AddWeatherCityViewController.swift in Sources */,
 				0E322E05297991820050EB2F /* AppDelegate.swift in Sources */,
+				0E0542A229BCCE5300599E00 /* TestRouter.swift in Sources */,
+				0E0542A129BCCE5300599E00 /* TestWorker.swift in Sources */,
 				0E2A9079298572F600E6F84F /* BindingTextField.swift in Sources */,
 				0E902329297EC4B9005F1FD7 /* WeatherListTableViewController.swift in Sources */,
 				0E7C80AA297D443000005C64 /* AddOrderViewController.swift in Sources */,
@@ -561,6 +590,7 @@
 				0E1D6D4B297A6B31004AF835 /* NewsListTableViewController.swift in Sources */,
 				0E902334297ED533005F1FD7 /* WeatherResponse.swift in Sources */,
 				0E2A906D298178C700E6F84F /* SettingsViewModel.swift in Sources */,
+				0E0542A329BCCE5300599E00 /* TestModels.swift in Sources */,
 				0E7C80B0297D816A00005C64 /* Order.swift in Sources */,
 				0E1D6D4E297A797E004AF835 /* WebService.swift in Sources */,
 				0E2A906F29817AA900E6F84F /* Unit.swift in Sources */,
@@ -575,8 +605,10 @@
 				0E1D6D57297C3828004AF835 /* ArticleTableViewCell.swift in Sources */,
 				0E902331297ECFB1005F1FD7 /* WeatherWebService.swift in Sources */,
 				0E2A906B2981786500E6F84F /* SettingsTableViewController.swift in Sources */,
+				0E0542A029BCCE5300599E00 /* TestPresenter.swift in Sources */,
 				0E902341297EE5BF005F1FD7 /* Double+Extensions.swift in Sources */,
 				0E7C80AD297D7B2000005C64 /* OrderWebservice.swift in Sources */,
+				0E0542A529BCCE5300599E00 /* TestInteractor.swift in Sources */,
 				0E1D6D51297B8EB9004AF835 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
